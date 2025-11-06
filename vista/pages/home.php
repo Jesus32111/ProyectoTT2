@@ -21,9 +21,9 @@ $currentPage = 'home';
         </div>
         </div>
 
-        <div class="hero-image">
-            <img src="assets/img/perro.png" alt="Perro feliz" class="slide-image img1">
-            <img src="assets/img/perro1.png" alt="Perro feliz 2" class="slide-image img2">
+        <div class="hero-image-animation">
+            <img src="assets/img/perro.png" alt="Perro feliz" class="animated-dog dog1">
+            <img src="assets/img/perro1.png" alt="Perro feliz 2" class="animated-dog dog2">
         </div>
 
         
@@ -157,7 +157,7 @@ $currentPage = 'home';
             </div>
 
             <div style="text-align: center; margin-top: 40px;">
-                <a href="/productos" class="btn btn-primary btn-large">Ver Todos los Productos</a>
+                <a href="?page=products" class="btn btn-primary btn-large">Ver Todos los Productos</a>
             </div>
         </div>
     </section>
