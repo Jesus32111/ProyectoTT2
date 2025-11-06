@@ -489,6 +489,64 @@
   animation-delay: 0.6s;
 }
 
+.hero-image-animation {
+    position: relative;
+    width: 700px;
+    height: auto; /* antes: 500px — se ajusta a la imagen */
+    overflow: visible; /* antes: hidden — evita que se recorte */
+}
+
+/* Imagen base */
+.animated-dog {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(1); /* antes: scale(2) — hacía que se corte */
+    width: 100%;
+    height: auto;
+    max-height: 700px; /* evita que sea más grande que el hero */
+    opacity: 0;
+}
+
+/* Segunda imagen: oculta inicialmente */
+.animated-dog.dog2 {
+    display: none;
+}
+
+/* Imagen activa: entra con animación */
+.animated-dog.active {
+    display: block;
+    animation: slideInFromBottom 1s forwards;
+}
+
+/* Imagen inactiva: se desvanece */
+.animated-dog.inactive {
+    animation: fadeOut 1s forwards;
+}
+
+/* --- Animación de entrada desde abajo --- */
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 100%) scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+}
+
+/* --- Animación de salida --- */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* --- Accesibilidad: reduce movimiento --- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
