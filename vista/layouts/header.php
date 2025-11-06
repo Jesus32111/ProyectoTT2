@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Veterinaria profesional - Cuidado integral para tus mascotas. Productos de calidad y servicios veterinarios.">
     <meta name="keywords" content="veterinaria, mascotas, productos veterinarios, alimentos, medicamentos">
-    <title><?php echo isset($pageTitle) ? $pageTitle . ' - ' : ''; ?>VetCare - Veterinaria Profesional</title>
+    <title><?php echo isset($pageTitle) ? $pageTitle . ' - ' : ''; ?>Clini Vet - Veterinaria Profesional</title>
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <header class="header animate-fade-in-down">
@@ -21,12 +23,12 @@
                         </svg>
                         +34 912 345 678
                     </a>
-                    <a href="mailto:info@vetcare.es">
+                    <a href="mailto:info@clinivet.es">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        info@vetcare.es
+                        info@clinivet.es
                     </a>
                 </div>
                 <div class="header-schedule">
@@ -47,16 +49,15 @@
                         <path d="M8 10.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5S8 11.33 8 10.5zm5 0c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5z"/>
                         <path d="M12 17.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
                     </svg>
-                    Vet<span>Care</span>
+                    Clini<span>Vet</span>
                 </a>
 
                 <nav>
                     <ul class="nav-menu">
-                        <li><a href="/" class="<?php echo (isset($currentPage) && $currentPage === 'home') ? 'active' : ''; ?>">Inicio</a></li>
-                        <li><a href="/servicios" class="<?php echo (isset($currentPage) && $currentPage === 'services') ? 'active' : ''; ?>">Servicios</a></li>
-                        <li><a href="/productos" class="<?php echo (isset($currentPage) && $currentPage === 'products') ? 'active' : ''; ?>">Productos</a></li>
-                        <li><a href="/sobre-nosotros" class="<?php echo (isset($currentPage) && $currentPage === 'about') ? 'active' : ''; ?>">Nosotros</a></li>
-                        <li><a href="/contacto" class="<?php echo (isset($currentPage) && $currentPage === 'contact') ? 'active' : ''; ?>">Contacto</a></li>
+                        <li><a href="?page=home" class="<?php echo (isset($currentPage) && $currentPage === 'home') ? 'active' : ''; ?>">Inicio</a></li>
+                        <li><a href="?page=products" class="<?php echo (isset($currentPage) && $currentPage === 'products') ? 'active' : ''; ?>">Productos</a></li>
+                        <li><a href="?page=contact" class="<?php echo (isset($currentPage) && $currentPage === 'contact') ? 'active' : ''; ?>">Contacto</a></li>
+                        <li><a href="?page=citas" class="<?php echo (isset($currentPage) && $currentPage === 'citas') ? 'active' : ''; ?>">Citas</a></li>
                     </ul>
                 </nav>
 

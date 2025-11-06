@@ -2,7 +2,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>VetCare</h3>
+                    <h3>CliniVet</h3>
                     <p>Cuidamos de tus mascotas con profesionalidad y dedicacion. Mas de 15 anos de experiencia en el cuidado veterinario integral.</p>
                     <div class="social-links">
                         <a href="#" class="social-link smooth-transition" aria-label="Facebook">
@@ -57,15 +57,15 @@
                     <p>
                         <strong>Direccion:</strong><br>
                         Calle Veterinaria, 123<br>
-                        28001 Madrid, Espana
+                        Meliton Carbajal 450, Ate
                     </p>
                     <p>
                         <strong>Telefono:</strong><br>
-                        <a href="tel:+34912345678">+34 912 345 678</a>
+                        <a href="tel:+34912345678">+51 984360290</a>
                     </p>
                     <p>
                         <strong>Email:</strong><br>
-                        <a href="mailto:info@vetcare.es">info@vetcare.es</a>
+                        <a href="mailto:info@vetcare.es">info@clinivet.pe</a>
                     </p>
                     <p>
                         <strong>Horario:</strong><br>
@@ -137,6 +137,28 @@
                         mainImage.src = newSrc;
                     });
                 });
+            }
+
+            const dog1 = document.querySelector('.animated-dog.dog1');
+            const dog2 = document.querySelector('.animated-dog.dog2');
+
+            if (dog1 && dog2) {
+                const animate = (current, next) => {
+                    current.classList.add('active');
+                    current.classList.remove('inactive');
+                    
+                    setTimeout(() => {
+                        current.classList.add('inactive');
+                        current.classList.remove('active');
+                        
+                        setTimeout(() => {
+                            current.style.display = 'none';
+                            next.style.display = 'block';
+                            animate(next, current);
+                        }, 1000);
+                    }, 2500);
+                };
+                animate(dog1, dog2);
             }
         });
     </script>

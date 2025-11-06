@@ -1,7 +1,6 @@
 <?php
 $pageTitle = 'Productos';
 $currentPage = 'products';
-include __DIR__ . '/../layouts/header.php';
 ?>
 
 <main>
@@ -186,5 +185,3 @@ include __DIR__ . '/../layouts/header.php';
         </div>
     </section>
 </main>
-
-<?php include __DIR__ . '/../layouts/footer.php'; ?>
