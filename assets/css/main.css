@@ -801,7 +801,7 @@
   display: flex;
   align-items: flex-end; /* 👈 pega los elementos al fondo */
   justify-content: space-between;
-  gap: 50px;
+  gap: 200px;
   flex-wrap: nowrap;
   min-height: 30vh; /* Da altura a la sección hero */
 }
